@@ -4,7 +4,9 @@
   "description": "Proyecto de Node con Typescript usando como DB PostgreSQL y para autenticar JWT",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "tsnd --respawn --clear src/server.ts"
+    "dev": "tsnd --respawn --clear src/server.ts",
+    "build":"rimraf ./dist && tsc",
+    "start": "node dist/server.js"
   },
   "author": "Terry I.",
   "license": "MIT",
