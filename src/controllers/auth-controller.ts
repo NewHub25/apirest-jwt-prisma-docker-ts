@@ -4,8 +4,8 @@ import prisma from "../models/user"
 import { generateToken } from "../services/auth.service";
 
 export const register = async (req: Request, res: Response): Promise<void> => {
-  const { email, password } = req.body;
-
+  const { email, password } = req.body; // propiedad body siempre es un objeto
+  
   try {
     if (!email) {
       res.status(400).json({ message: "El correo es obligatorio" });
